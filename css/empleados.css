@@ -1,0 +1,67 @@
+.container-main{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.container-form, div aside, main{
+    margin: 15px;
+    padding: 25px;
+}
+.container-backround{
+    width: 80%;
+}
+.container-form button{
+  background-color: #2294ff;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+}
+.container-form button:hover{
+  background-color: black;
+}
+#encabezadoEmpleados{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#tabla_empleados{
+  border-collapse: collapse;
+  width: 100%;
+}
+#tabla_empleados td, #tabla_empleados th{
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+#tabla_empleados tbody tr:nth-child(even){background-color: #ffffff;}
+#tabla_empleados tbody tr:hover {background-color: #ddd;}
+  
+#tabla_empleados thead tr th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(0, 110, 201);
+  color: white;
+}
+#logo_intecap_51{
+  width: 200px;
+}
+@media(max-width:1280px){
+  .container-main{
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .container-main div{
+    display: flex;
+    flex-direction: row;
+  }
+  #logo_intecap_51{
+    width: 400px;
+  }
+  .container-form{
+    width: 40%;
+  }
+  .container-backround{
+    width: 90%;
+  }
+}

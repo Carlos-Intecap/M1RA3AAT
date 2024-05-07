@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleados</title>
+    <link rel="shortcut icon" href="img/icono_intecap.png" />
+    <link rel="stylesheet" href="css/interfaz.css">
+    <link rel="stylesheet" href="css/empleados.css">
+    <script src="js/empleados.js"></script>
+</head>
+<body>
+    <header>
+        <aside>
+            <img id="logo_intecap" src="img/logo_intecap.png" alt="">
+        </aside>
+        <aside id="redes">
+            <a href="https://www.facebook.com/intecapoficial"><img src="img/icono_facebook.png" alt=""></a>
+            <a href="https://twitter.com/intecapoficial"><img src="img/icono_x.png" alt=""></a>
+            <a href="https://www.instagram.com/intecapoficial/?hl=es"><img src="img/icono_instagram.png" alt=""></a>
+            <a href="https://www.youtube.com/user/intecapguate"><img src="img/icono_youtube.png" alt=""></a>
+            <a href="https://gt.linkedin.com/school/intecapoficial/"><img src="img/icono_linkedin.png" alt=""></a>
+        </aside>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a class="active" href="empleados.html">Empleados</a></li>
+            <li><a href="sueldo.html">Sueldo líquido</a></li>
+            <li><a href="indemnizacion.html">Indemnización</a></li>
+        </ul>
+    </nav>
+    <section class="container-main">
+        <div>
+            <section class="container-form">
+                <h2>Empleado</h2>
+                <label for="txt_nombre">Nombre</label>
+                <br><input type="text" id="txt_nombre" placeholder="Ingrese su nombre">
+                <br><label for="txt_fecha">Fecha de ingreso</label>
+                <br><input type="date" id="txt_fecha">
+                <br><label for="txt_puesto">Puesto</label>
+                <br><select id="txt_puesto" name="txt_puesto">
+                    <option value="Programador">Programador</option>
+                    <option value="Oficinista">Oficinista</option>
+                    <option value="Contador">Contador</option>
+                    <option value="Secretaria">Secretaria</option>
+                </select>
+                <br><label for="txt_salario">Salario</label>
+                <br><input type="number" id="txt_salario" placeholder="Q.0.00">
+                <br><button onclick="guardar()" id="btn_guardar">Guardar</button>
+            </section>
+            <aside>
+                <img id="logo_intecap_51" src="img/logo_intecap_51.jpg" alt="">
+            </aside>
+        </div>
+        <main class="container-backround">
+            <div id="encabezadoEmpleados">
+                <h2>Lista de empleados</h2>
+                <div>
+                    <button class="blue-button" onclick="eliminarPrimero()">Eliminar primero</button>
+                    <button class="blue-button" onclick="eliminarUltimo()">Eliminar último</button>
+                </div>
+            </div>
+            <table id="tabla_empleados">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha de ingreso</th>
+                        <th>Puesto</th>
+                        <th>Salario</th>
+                    </tr>
+                </thead>
+                <tbody id="datos_empleados">
+                </tbody>
+            </table>
+        </main>
+    </section>
+</body>
+</html>
